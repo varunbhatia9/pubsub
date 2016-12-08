@@ -12,8 +12,7 @@ The constructor takes first argument as publisher_id. Second as publisher_id.
 To create a new Subscriber
 $subscriber = new MiniQ(0,1);
 
-To add a new Topic 
-// if queue exists we get Queue Id , else new queue is created
+To add a new Topic (if queue exists we get Queue Id , else new queue is created)
 $queue_id = $subscriber->createQueue('News');
 
 To become a Publisher
@@ -21,10 +20,8 @@ $subscriber = new MiniQ(0,1);
 $subscriber_add = $subscriber->subscriberAddRequest($queue_id);
 
 To become a Subscriber
-// if queue exists we get Queue Id , else new queue is created
 
 $queue_id = $subscriber->createQueue('News');
-// subscribes to channel , if not already
 $subscriber_add = $subscriber->subscriberAddRequest($queue_id);
 
 To Publish a message to a queue
