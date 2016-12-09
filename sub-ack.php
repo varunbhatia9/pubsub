@@ -2,7 +2,7 @@
 require_once 'bootstrap.php';
 
 // subscriber object
-$subscriber = new MiniQ(0,1);
+$subscriber = new Subscriber(1);
 
 // if queue exists we get Queue Id , else new queue is created
 $queue_id = $subscriber->createQueue('News');
@@ -39,3 +39,4 @@ else
 sleep(1);
 $x++;
 }
+?>
