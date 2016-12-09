@@ -18,6 +18,7 @@ define('MESSAGE_PER_POLL',2);
 
 require_once 'sqlquery.class.php';
 require_once 'miniQ.class.php';
-
+require_once 'publisher.class.php';
+require_once 'subscriber.class.php';
 
 ?>
