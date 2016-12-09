@@ -1,8 +1,8 @@
 <?php
 
-Class MiniQ {
+Abstract Class MiniQ {
 
-    function __construct($publisher_id = 0, $subscriber_id = 0) {
+    public function __construct($publisher_id = 0, $subscriber_id = 0) {
         // TODO : breakdown into publisher+ subscriber classes
         // TODO : move DB calls in a model class
         $this->publisher_id = $publisher_id;
