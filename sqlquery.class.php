@@ -6,7 +6,7 @@
  * As this class is designed on basis of singleton pattern.
  * It can be accessed by SQLQuery::getInstance();
  * Every instance of the class contains 1 read and 1 write connection.
- * @package SocialGamesLibrary
+ * @package PubSub
  *
  */
 class SQLQuery {
@@ -80,37 +80,9 @@ class SQLQuery {
     }
 
 
-    /**
-     * execute write queries
-     * @param string sql statement
-     * @return mysqli_query result
-     */
-    public function write_query_wifi($query) {
-        //return self::getInstance()->mysqli_write->query($query);
-        $return = self::getInstance()->mysqli_readwifi->query($query);
-        if (!$return) {
-            error_log(mysqli_error(self::getInstance()->mysqli_readwifi));
-        }
-        return $return;
-    }
-
-    
-    
-    /**
-     * execute read queries
-     * @param string sql statement
-     * @return mysqli_query result
-     */
-//    public function read_query_php($query) {
-//        //return self::getInstance()->mysqli_read->query($query);
-//        $return = self::getInstance()->mysqli_read_php->query($query);
-//        if (!$return) {
-//            error_log(mysqli_error(self::getInstance()->mysqli_read_php));
-//        }
-//        return $return;
-//    }
     
     public function escape_string($instanceOf, $escapeVar) {
         return self::getInstance()->$instanceOf->real_escape_string($escapeVar);
     }
 }
+?>
