@@ -5,12 +5,12 @@ Work in progress.
 
 1.) To initialize a Publisher
 
-$publisher = new MiniQ(1,0);
+$publisher = new Publisher(1);
 
 The constructor takes first argument as publisher_id. Second as publisher_id.
 
 2.) To create a new Subscriber
-$subscriber = new MiniQ(0,1);
+$subscriber = new Subscriber(1);
 
 3.) To add a new Topic (if queue exists we get Queue Id , else new queue is created) . This can be used in subscriber/publisher
 
@@ -47,4 +47,5 @@ This will add 100 messages to message queue.
 
 php sub-ack.php
 This will start polling for new messages from queue.
+
 
